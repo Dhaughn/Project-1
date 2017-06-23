@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+      <div id="container">
+
+      </div>
+      <button onclick="pageBack1()">&lt; Back</button>
+      <button onclick="pageForward1()">Next &gt;</button>
+    <script src="script.js"></script>
+    <script src="image.js"></script>
+    <script>
+      window.onload = function() {
+        setImage(getParameterByName('image'));
+      }
+    </script>
+  </body>
+</html>

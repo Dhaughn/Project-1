@@ -1,0 +1,12 @@
+.thumbnail {
+  width: 20%;
+  height: 250px;
+  margin: 2%;
+  border: 3px solid black;
+  border-radius: 15px;
+}
+
+#images {
+  width: 80%;
+  margin: 0 auto;
+}
