@@ -25,6 +25,28 @@ var images = [
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+var increase = function() {
+  httpGetAsync('/api/increase', callbackFunc);
+}
+
+var decrease = function() {
+  httpGetAsync('/api/decrease', callbackFunc);
+}
+
+function callbackFunc(res) {
+  console.log(res);
+}
+
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+    xmlHttp.send(null);
+}
 
 var update = function() {
   removeImages();
